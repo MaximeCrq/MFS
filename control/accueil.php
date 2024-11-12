@@ -1,5 +1,7 @@
 <?php
 
-class ControlerAccueil
+class ControllerAccueil {
+
+}
 
 ?>
