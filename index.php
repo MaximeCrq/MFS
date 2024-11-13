@@ -37,7 +37,7 @@ switch($path){
         $style='liste';
         $script='liste';
         include './view/view_header.php';
-        include './view/view_ajout_quiz.php';
+        include './view/view_liste_quiz.php';
         include './view/view_footer.php';
         break;
 }
