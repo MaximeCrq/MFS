@@ -1,0 +1,12 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 100vw;
+    text-align: center;
+
+}
+main input{
+    width: 16%;
+    align-self: center;
+}
