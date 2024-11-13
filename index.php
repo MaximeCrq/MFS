@@ -40,6 +40,14 @@ switch($path){
         include './view/view_compte.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/inscription' :
+        //J'inclure mes views
+        $style='connexion_inscription';
+        $script='connexion_inscription';
+        include './view/view_header.php';
+        include './view/view_connexion_inscription.php';
+        include './view/view_footer.php';
+        break;
     case '/MFS/liste_quiz' :
         //J'inclure mes views
         $style='liste';
