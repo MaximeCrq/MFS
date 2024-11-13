@@ -20,7 +20,6 @@
                 <li><a href="">LISTE DES QUIZ</a></li>
                 <li><a href="">STATISTIQUE</a></li>
                 <li><a href="">INSCRIPTION</a></li>
-                <li><a href="">CONNEXION</a></li>
                 <img src="./image/icon_login1.png">
             </ul>
         </nav>

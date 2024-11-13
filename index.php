@@ -24,4 +24,20 @@ switch($path){
         include './view/view_accueil.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/ajout_quiz' :
+        //J'inclure mes views
+        $style='ajout_quiz';
+        $script='ajout_quiz';
+        include './view/view_header.php';
+        include './view/view_ajout_quiz.php';
+        include './view/view_footer.php';
+        break;
+    case '/MFS/liste_quiz' :
+        //J'inclure mes views
+        $style='liste';
+        $script='liste';
+        include './view/view_header.php';
+        include './view/view_ajout_quiz.php';
+        include './view/view_footer.php';
+        break;
 }
