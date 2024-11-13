@@ -1,3 +1,14 @@
 main{
     height: 80vh;
+    justify-content: center;
+  
+}
+main p,h3 {
+    width: 60%;
+    display: flex;
+    justify-self: center;
+}
+main h1{
+    text-align: center;
+    padding-top: 10vh;
 }
