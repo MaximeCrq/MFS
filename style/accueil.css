@@ -1,14 +1,25 @@
 main{
-    height: 80vh;
-    justify-content: center;
-  
-}
-main p,h3 {
-    width: 60%;
+    margin: 100px 0px 100px 0px;
     display: flex;
-    justify-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-main h1{
-    text-align: center;
-    padding-top: 10vh;
+
+main div { 
+    padding: 10px;
+    margin: 100px 30% 100px 30%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background-color: rgb(166, 92, 23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    color: aliceblue;
+    p,h3{
+        align-items: left;
+        text-align: start;
+        text-wrap:  initial;
+    }
 }

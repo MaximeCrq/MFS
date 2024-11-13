@@ -13,14 +13,22 @@
 </head>
 <body>
     <header>
-        <nav>
-            <img src="./image/logo1.png">
+        <nav id='nav_bar_1'>
+            <a id="lien_logo_site" href="/MFS/accueil"><img id="logo_site" src="./image/logo1.png"></a>
             <ul>
-                <li><a href="">ACCUEIL</a></li>
-                <li><a href="">LISTE DES QUIZ</a></li>
-                <li><a href="">STATISTIQUE</a></li>
-                <li><a href="">INSCRIPTION</a></li>
-                <img src="./image/icon_login1.png">
+                <li><a href="/MFS/accueil">ACCUEIL</a></li>
+                <li><a href="/MFS/liste_quiz">LISTE DES QUIZ</a></li>
+                <li><a href="/MFS/statistique">STATISTIQUE</a></li>
+                <li><a href="/MFS/Connexion_Inscription">Connexion/Inscription</a></li>
+                <li><a href="/MFS/deconnexion">DECONNEXION</a></li>
+            </ul>
+            <a id="lien_logo_compte" href="/MFS/compte"><img id="logo_compte" src="./image/icon_login1.png"></a>
+        </nav>
+        <nav id='nav_bar_2'>
+            <ul>
+                <li><a href="/MFS/ajout_quiz">AJOUTER UN QUIZ</a></li>
+                <li><a href="/MFS/liste_utilisateur"></a>LISTE DES UTILISATEURS</li>
+                <li><a href="/MFS/ban_liste">BAN LISTE</a></li>
             </ul>
         </nav>
     </header>
