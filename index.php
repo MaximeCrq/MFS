@@ -12,14 +12,16 @@ $url = parse_url($_SERVER['REQUEST_URI']);
 //Je dois récupérer le path entré par l'utilisateur, en bref, la page demandé
 $path = (isset($url['path'])) ? $url['path'] : '/';
 
-print_r($path);
+//print_r($path);
 
 switch($path){
     // page d'accueil
     case '/MFS/' :
         //J'inclure mes views
-        include './view/header.php';
-        include './view/accueil.php';
-        
+        $style='accueil';
+        $script='accueil';
+        include './view/view_header.php';
+        include './view/view_accueil.php';
+        include './view/view_footer.php';
         break;
 }
