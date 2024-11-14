@@ -1,5 +1,6 @@
 <main>
     <form action="" method="Post" class="formulaireUN">
+    <h1>inscription</h1>
         <div id="form">
             <section>
                 <label for="nom">Nom</label>
@@ -26,8 +27,9 @@
         </div>
     </form>
     <form action="" method="Post" class="formulaireDEUX">
+        <h1>connexion</h1>
         <div id="form">
-           
+        
             <section>
                 <label for="mail">Mail</label>
                 <input type="email" name="mail"/>
