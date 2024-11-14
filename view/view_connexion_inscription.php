@@ -1,19 +1,28 @@
 <main>
     <form action="" method="Post">
-        <label for="nom">nom
-            <input type="text" name="nom"/>
-        </label>
-        <label for="prenom">prénom
-            <input type="text" name="prenom"/>
-        </label>
-        <label for="mail">mail
-            <input type="email" name="mail"/>
-        </label>
-        <label for="mdp">mot de pass
-            <input type="password" name="mdp"/>
-        </label>
-        <label for="vérifMdp">mail</label>
-        <input type="password" name="vérifMdp"/>
-        <input type="submit" name ="submit"/>
+        <div id="form">
+            <section>
+                <label for="nom">Nom</label>
+                <input type="text" name="nom"/>
+            </section>
+            <section>
+                <label for="prenom">Prénom</label>
+                <input type="text" name="prenom"/>
+            </section>
+            <section>
+                <label for="mail">Mail</label>
+                <input type="email" name="mail"/>
+            </section>
+            <section>
+                <label for="mdp">Mot de pass</label>
+                <input type="password" name="mdp"/>
+            </section>
+            <section>
+                <label for="vérifMdp">Vérification mot de passe</label>
+                <input type="password" name="vérifMdp"/>
+            </section>
+            <p>vous avez déjà un compte</p>
+            <input type="submit" name ="submit" value="valider"/>
+        </div>
     </form>
 </main>
