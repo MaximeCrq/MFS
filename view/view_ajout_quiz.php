@@ -2,7 +2,7 @@
   <main>
     <div id="contenu">
       <h1>Création d’un quiz</h1>
-      <form>
+      <form action="" method="POST">
         <div id="créa_quiz">
           <select name="theme" id="theme">
             <option value="PHP">PHP</option>
