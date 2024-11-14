@@ -24,6 +24,14 @@ switch($path){
         include './view/view_accueil.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/accueil' :
+        //inclure mes views
+        $style='accueil';
+        $script='accueil';
+        include './view/view_header.php';
+        include './view/view_accueil.php';
+        include './view/view_footer.php';
+        break;
     case '/MFS/ajout_quiz' :
         //inclure mes views
         $style='ajout_quiz';
@@ -40,7 +48,7 @@ switch($path){
         include './view/view_compte.php';
         include './view/view_footer.php';
         break;
-    case '/MFS/Connexion_Inscription' :
+    case '/MFS/connexion_inscription' :
         //inclure mes views
         $style='connexion_inscription';
         $script='connexion_inscription';
@@ -84,6 +92,14 @@ switch($path){
         //inclure mes views
         $style='mentions_legales';
         $script='mentions_legales';
+        include './view/view_header.php';
+        include './view/view_mentions_legales.php';
+        include './view/view_footer.php';
+        break;
+    case '/MFS/statistique' :
+        //inclure mes views
+        $style='state';
+        $script='state';
         include './view/view_header.php';
         include './view/view_mentions_legales.php';
         include './view/view_footer.php';

@@ -19,7 +19,7 @@
                 <li><a href="/MFS/accueil">ACCUEIL</a></li>
                 <li><a href="/MFS/liste_quiz">LISTE DES QUIZ</a></li>
                 <li><a href="/MFS/statistique">STATISTIQUE</a></li>
-                <li><a href="/MFS/Connexion_Inscription">Connexion/Inscription</a></li>
+                <li><a href="/MFS/connexion_inscription">Connexion/Inscription</a></li>
             </ul>
             <a id="lien_logo_compte" href="/MFS/compte"><img id="logo_compte" src="./image/icon_login1.png"></a>
         </nav>
