@@ -1,3 +1,12 @@
+.fomulaireDEUX.afficher{
+    display: none;
+}
+.fomulaireUN.afficher{
+    display: flex;
+}
+.fomulaire2{
+    display: none;
+}
 main {
     display: flex;
     justify-content: center;
@@ -5,7 +14,7 @@ main {
     color: white;
     font-weight: bold;
 }
-main form{
+main .formulaireUN,.formulaireDEUX{
     display: flex;
     flex-direction: column;
     border: 1px solid  rgb(207,52,0);
@@ -22,7 +31,7 @@ main form{
     justify-content: center;
     width: 80%;
 }
-form #form section{
+.formulaireUN #form section{
     display: flex;
     flex-direction: column;
 }
@@ -61,7 +70,7 @@ input[type="submit"]:hover{
 }
 
 @media (max-width: 450px) {
-    main form{
+    main .formulaireUN{
         display: flex;
         flex-direction: column;
         border: 1px solid  rgb(207,52,0);
