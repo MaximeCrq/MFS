@@ -80,4 +80,12 @@ switch($path){
         include './view/view_ban_liste.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/mentions_legales' :
+        //inclure mes views
+        $style='mentions_legales';
+        $script='mentions_legales';
+        include './view/view_header.php';
+        include './view/view_mentions_legales.php';
+        include './view/view_footer.php';
+        break;
 }
