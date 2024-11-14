@@ -32,14 +32,6 @@ switch($path){
         include './view/view_accueil.php';
         include './view/view_footer.php';
         break;
-    case '/MFS/ajout_quiz' :
-        //inclure mes views
-        $style='ajout_quiz';
-        $script='ajout_quiz';
-        include './view/view_header.php';
-        include './view/view_ajout_quiz.php';
-        include './view/view_footer.php';
-        break;
     case '/MFS/compte' :
         //inclure mes views
         $style='compte';
