@@ -1,4 +1,74 @@
+main {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    color: white;
+    font-weight: bold;
+}
 main form{
     display: flex;
     flex-direction: column;
+    border: 1px solid  rgb(207,52,0);
+    border-radius: 12px;
+    width: 60%;
+    align-items: center;
+    padding: 2%;
+    background-color: rgb(207,52,0);
+    
 }
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+}
+form #form section{
+    display: flex;
+    flex-direction: column;
+}
+#form section {
+    margin-top: 4%;
+}
+
+#form p {
+    text-decoration: underline;
+}
+
+#form section input[type="text"],[type="password"], [type="email"]{
+width: 100%;
+border: 1px solid  rgb(207,52,0);
+border-radius: 15px;
+height: 16px;
+padding: 2%;
+
+
+}
+#form input[type="submit"]{
+    width: 40%;
+    height: 30px;
+    margin-top: 6%;
+    margin-bottom: 2%;
+    align-self: center;
+    border-radius: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    font-weight: bold;
+
+
+}
+input[type="submit"]:hover{
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 450px) {
+    main form{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid  rgb(207,52,0);
+        border-radius: 12px;
+        width: 60%;
+        align-items: center;
+        padding: 6%;
+        padding-right: 8%;
+    }
+ }
