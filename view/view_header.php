@@ -27,7 +27,7 @@
             <ul>
                 <li><a href="/MFS/ajout_quiz">AJOUTER UN QUIZ</a></li>
                 <li><a href="/MFS/ajout_formateur">AJOUTER UN FORMATEUR</a></li>
-                <li><a href="/MFS/liste_utilisateur"></a>LISTE DES UTILISATEURS</li>
+                <li><a href="/MFS/liste_utilisateur">LISTE DES UTILISATEURS</a></li>
                 <li><a href="/MFS/ban_liste">BAN LISTE</a></li>
             </ul>
         </nav>
