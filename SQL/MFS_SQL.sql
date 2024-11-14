@@ -15,7 +15,8 @@ CREATE TABLE questions(
    id_question INT PRIMARY KEY AUTO_INCREMENT,
    title_question VARCHAR(100),
    description_question VARCHAR(255),
-   img_question VARCHAR(255)
+   img_question VARCHAR(255),
+   multiple INT
 );
 
 CREATE TABLE categorys(
