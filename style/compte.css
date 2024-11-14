@@ -2,6 +2,10 @@ main{
     height: auto;
     text-align: center;
     justify-items: center;
+    margin: 50px 0 100px 0;
+    h1{
+        margin-bottom: 50px;
+    }
 }
 #compte{
     width: 60%;
@@ -18,15 +22,7 @@ main #compte section {
     
 
 }
-main #compte #deconnexion{
-    background-color: white;
-    border-radius: 15px;
-    border: 1px solid rgb(207,52,0);
-    padding: 1%;
-    padding-left: 3%;
-    padding-right: 3%;
-    margin-top: 2vh;
-}
+
 main #compte section .bouton_compte {
     height: 20%;
     align-self: center;
@@ -38,3 +34,37 @@ main #compte section .bouton_compte {
    padding-left: 2%;
    padding-right: 2%;
 }
+
+main #image_avatar {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 214, 137);
+    border: 3px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+main #deconnexion{
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(207,52,0);
+    width: calc(15vh + 100px);
+    height: 50px;
+    margin-top: 2vh;
+    font-weight: 1000;
+}
+
+main #deconnexion:hover{
+    background-color: rgb(207,52,0);
+    color: white;
+    cursor: pointer;
+}
+

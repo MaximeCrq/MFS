@@ -3,8 +3,9 @@
     <div id="compte">
         <section>
             <div id="perso">
-                <img href="">
-                <h3>avatar</h3>
+                <div id="image_avatar">
+                    <img src="./image/avatar/avatar_renard.png">
+                </div>
             </div>
             <input type="submit" name="avatar" class="bouton_compte" value="Modifier son avatar"/>
         </section>
@@ -26,6 +27,6 @@
             </div>
             <input type="submit" name="mdp" class="bouton_compte" value="Modifier son mot de passe"/>
         </section>
-        <input type="submit" name="valider" value="déconnexion" id="deconnexion"/>
+        <input type="submit" name="valider" value="DECONNEXION" id="deconnexion"/>
     </div>
 </main> 
