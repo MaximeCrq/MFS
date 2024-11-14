@@ -58,18 +58,58 @@ switch($path){
         break;
     case '/MFS/liste_quiz' :
         //inclure mes views
-        $style='liste';
-        $script='liste';
+        $style='liste_quiz';
+        $script='liste_quiz';
         include './view/view_header.php';
         include './view/view_liste_quiz.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/mentions_legales' :
+        //inclure mes views
+        $style='mentions_legales';
+        $script='mentions_legales';
+        include './view/view_header.php';
+        include './view/view_mentions_legales.php';
+        include './view/view_footer.php';
+        break;
+    case '/MFS/statistique' :
+        //inclure mes views
+        $style='statistique';
+        $script='statistique';
+        include './view/view_header.php';
+        include './view/view_statistique.php';
+        include './view/view_footer.php';
+        break;
+
+
+    //QUIZZ
+    //ESSAIE
+    case '/MFS/liste_quiz/quiz1' :
+        //inclure mes views
+        $style='quiz';
+        $script='quiz';
+        include './view/view_header.php';
+        include './view/quiz/quiz1.php';
+        include './view/view_footer.php';
+        break;
+
+
+
+    //ADMINISTRATEUR
     case '/MFS/ajout_quiz' :
         //inclure mes views
         $style='ajout_quiz';
         $script='ajout_quiz';
         include './view/view_header.php';
         include './view/view_ajout_quiz.php';
+        include './view/view_footer.php';
+        break;
+    case '/MFS/ajout_formateur' :
+        //inclure mes views
+        $style='ajout_formateur';
+        $script='ajout_formateur';
+        include './view/view_header.php';
+        include './view/view_ajout_formateur.php';
         include './view/view_footer.php';
         break;
     case '/MFS/liste_utilisateur' :
@@ -86,22 +126,6 @@ switch($path){
         $script='ban_liste';
         include './view/view_header.php';
         include './view/view_ban_liste.php';
-        include './view/view_footer.php';
-        break;
-    case '/MFS/mentions_legales' :
-        //inclure mes views
-        $style='mentions_legales';
-        $script='mentions_legales';
-        include './view/view_header.php';
-        include './view/view_mentions_legales.php';
-        include './view/view_footer.php';
-        break;
-    case '/MFS/statistique' :
-        //inclure mes views
-        $style='state';
-        $script='state';
-        include './view/view_header.php';
-        include './view/view_mentions_legales.php';
         include './view/view_footer.php';
         break;
 }
