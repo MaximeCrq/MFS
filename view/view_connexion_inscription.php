@@ -42,5 +42,4 @@
             <input type="submit" name ="submit" value="valider"/>
         </div>
     </form>
-    <script src="script/Connexion_Inscription.js"></script>
 </main>
