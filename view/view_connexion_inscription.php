@@ -19,8 +19,8 @@
                 <input type="password" name="mdp"/>
             </section>
             <section>
-                <label for="vérifMdp">Vérification mot de passe</label>
-                <input type="password" name="vérifMdp"/>
+                <label for="verifMdp">Vérification mot de passe</label>
+                <input type="password" name="verifMdp"/>
             </section>
             <p class="p_form_ins">vous avez déjà un compte</p>
             <input type="submit" name ="submit" value="valider"/>
