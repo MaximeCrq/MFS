@@ -5,6 +5,8 @@ session_start();
 
 //J'inclure mes resources communes à chaque route
 include './utils/sanitize.php';
+include './model/model_users.php';
+include './manager/manager_user.php';
 
 //Récupération de l'url entrée par l'utilisateur
 $url = parse_url($_SERVER['REQUEST_URI']);
@@ -42,6 +44,7 @@ switch($path){
         break;
     case '/MFS/connexion_inscription' :
         //inclure mes views
+        include "./control/connexion_inscription.php";
         $style='connexion_inscription';
         $script='connexion_inscription';
         include './view/view_header.php';
