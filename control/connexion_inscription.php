@@ -3,7 +3,7 @@
 class ControlInscription{
    
 
-    private   $message;
+    private $message;
 
     public function __construct(){
         $this->message="";
@@ -56,7 +56,6 @@ class ControlInscription{
                 echo('crevette4');
                 $nouveau_objet=new ManagerUser;
                 $data =  $this->$nouveau_objet->recherche_User($mes_donnee["mail"]);
-                echo('crevette45');
                 if(gettype($data) == 'string'){
                     echo('crevette5');
                         $this->setErrorMes($data);
