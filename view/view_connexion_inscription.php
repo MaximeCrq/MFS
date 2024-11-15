@@ -1,6 +1,7 @@
 <main>
     <form action="" method="Post" class="formulaireUN">
     <h1>inscription</h1>
+    <p><?php echo $message?></p>
         <div id="form">
             <section>
                 <label for="nom">Nom</label>
@@ -42,4 +43,5 @@
             <input type="submit" name ="submit" value="valider"/>
         </div>
     </form>
+    
 </main>
