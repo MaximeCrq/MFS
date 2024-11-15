@@ -5,6 +5,7 @@ session_start();
 
 //J'inclure mes resources communes à chaque route
 include './utils/sanitize.php';
+include './control/controlerHeader.php';
 include './model/model_users.php';
 include './manager/manager_user.php';
 
