@@ -103,6 +103,14 @@ switch($path){
         include './view/view_ajout_quiz.php';
         include './view/view_footer.php';
         break;
+    case '/MFS/ajout_quiz_question' :
+        //inclure mes views
+        $style='ajout_quiz_question';
+        $script='ajout_quiz_question';
+        include './view/view_header.php';
+        include './view/view_ajout_question.php';
+        include './view/view_footer.php';
+        break;
     case '/MFS/ajout_formateur' :
         //inclure mes views
         $style='ajout_formateur';
