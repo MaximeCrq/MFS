@@ -5,8 +5,12 @@ session_start();
 
 //J'inclure mes resources communes à chaque route
 include './utils/sanitize.php';
+include './control/controlerHeader.php';
 include './model/model_users.php';
 include './manager/manager_user.php';
+
+$header = new ControlerHeader();
+$header-> displayNav();
 
 //Récupération de l'url entrée par l'utilisateur
 $url = parse_url($_SERVER['REQUEST_URI']);
