@@ -7,7 +7,6 @@ class ControlInscription{
 
     public function __construct(){
         $this->message = "";
-        
     }
 
     public function getMessage(): ?string { return $this->message; }
