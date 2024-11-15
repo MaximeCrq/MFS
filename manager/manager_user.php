@@ -1,7 +1,7 @@
 <?php
-class manager_user extends ModelUser{
+class ManagerUser extends ModelUser{
 
-    function addUSER(){
+    function add_USER(){
         $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        
        
@@ -39,7 +39,7 @@ class manager_user extends ModelUser{
 
 }
 
-function recherchUser($login_user){
+function recherche_User($login_user){
     //1Er Etape : Instancier l'objet de connexion PDO
     $bdd = new PDO('mysql:host=localhost;dbname=task5','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
