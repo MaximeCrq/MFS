@@ -3,16 +3,11 @@
 class ControlInscription{
    
 
-    private  $message;
+    private   $message;
 
     public function __construct(){
-        $message="";
+        $this->message="";
         
-    }
-
-    public function getErrorMes():self
-    {
-        return $this;
     }
 
     public function setErrorMes(?string $message): self
@@ -20,13 +15,19 @@ class ControlInscription{
         $this->message = $message;
         return $this;
     }
+    public function getErrorMes()
+    {
+        return $this->message;
+    }
+
+    
     
     public function nettoyage_donnee_insc(){
         if(empty($_POST["nom"])|| empty($_POST["prenom"]) || empty($_POST["mail"])||empty($_POST["mdp"])){
-                return ["erreur" => "vous n’avez pas remplie tous les champs"];
+                return ["erreur" => "vous n'avez pas remplie tous les champs"];
         }
             if(!filter_var($_POST["mail"],FILTER_VALIDATE_EMAIL)){
-                return ["erreur"=>"votre email n’ai pas valide"];
+                return ["erreur"=>"votre email n'ai pas valide"];
         }
     
     
@@ -34,39 +35,47 @@ class ControlInscription{
         $prenom =sanitize($_POST["prenom"]);
         $mail =sanitize($_POST["mail"]);
         $mdp =sanitize($_POST["mdp"]);
-        
-        return ["nom"=>$nom,"prenom"=>$prenom,"mail"=>$mail,"mdp"=>$motDePasse];
+
+        $motDePasse= password_hash($mdp,PASSWORD_BCRYPT);
+     
+        return ["nom"=>$nom,"prenom"=>$prenom,"mail"=>$mail,"mdp"=>$motDePasse,"erreur"=>""];
     }
+    
 
     
-    function controlForm(){
+    public function controlForm(){
+        echo('crevette');
         if(isset($_POST["inscription"])){
-            $mes_donnee= nettoyage_donnee_insc();
+            echo('crevette');
+            $mes_donnee = $this->nettoyage_donnee_insc();
             if($mes_donnee['erreur'] != ''){
-                    setErrorMes($mes_donnee['erreur']);
-                    echo("crevette");
+                echo('crevette3');
+                    $this->setErrorMes($mes_donnee['erreur']);
                 }
             else{
-                $data = recherche_User($mes_donnee["mail"]);
+                echo('crevette4');
+                $nouveau_objet=new ManagerUser;
+                $data =  $this->$nouveau_objet->recherche_User($mes_donnee["mail"]);
+                echo('crevette45');
                 if(gettype($data) == 'string'){
-                        setErrorMes($data);
+                    echo('crevette5');
+                        $this->setErrorMes($data);
                     }else{
                         if(empty($data)){
-                         $nouveau_objet=new ManagerUser;
-                        $nouveau_objet->setFirstname($mes_donnee["prenom"])->setLastname($mes_donnee["nom"])->setEmail($mes_donnee["mail"])->setPassword($mes_donnee["mdp"]);
-    
-                        $_SESSION['login_user']=$nouveau_objet->getEmail();
-                        $_SESSION['lastname_user']=$nouveau_objet->getLastname();
-                        $_SESSION['fistname_user']=$nouveau_objet->getFirstname();
-                        $_SESSION['password']=$nouveau_objet->getPassword();
-                        setErrorMes("vous avez bien enregistrer");
+                            echo('crevette6');
+
+                        $nouveau_objet->setFirstname($mes_donnee["prenom"]);
+                        $nouveau_objet->setLastname($mes_donnee["nom"])->setEmail($mes_donnee["mail"])->setPassword($mes_donnee["mdp"]);
+                        $nouveau_objet->add_USER();
+                        echo('crevette7');
+                       
                         }
                     }       
             
                 }    
+        
         }
-    }
-}    
-
+    }    
+}
 
 ?>

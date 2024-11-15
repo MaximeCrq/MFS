@@ -46,7 +46,6 @@ switch($path){
         //inclure mes views
         include "./control/connexion_inscription.php";
         $user = new ControlInscription;
-        $user->nettoyage_donnee_insc();
         $user->controlForm();
         $style='connexion_inscription';
         $script='connexion_inscription';

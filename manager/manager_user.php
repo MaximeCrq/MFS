@@ -16,7 +16,7 @@ class ManagerUser extends ModelUser{
             $mdp_user= $this->getPassword();
             
     
-    
+            echo('crevette8');
     
             //3eme Etape : Binding de Paramètre pour relier chaque ? à sa donnée
             $req->bindParam(1,$nom_user,PDO::PARAM_STR);
@@ -41,13 +41,13 @@ class ManagerUser extends ModelUser{
 
 function recherche_User($login_user){
     //1Er Etape : Instancier l'objet de connexion PDO
-    $bdd = new PDO('mysql:host=localhost;dbname=task5','root','root',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
     //Try...Catch
     try{
         //2nd Etape : préparer ma requête SELECT
-        $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user = ?');
+        $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user = (?)');
 
 
         //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre

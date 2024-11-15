@@ -24,6 +24,3 @@ para_co.addEventListener('click',() =>{
     formulaire_un.style.display="flex"
    formulaire_deux.style.display="none"
 })
-button.addEventListener('click',(event)=>{
-    event.preventDefault();
-})
