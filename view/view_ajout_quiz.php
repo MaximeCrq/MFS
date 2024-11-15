@@ -12,22 +12,22 @@
             <option value="HTMLetCSS">HTML et CSS</option>
           </select>
           <section>
-            <label for="mdp">Question</label>
-            <input type="text" name="questionPose"/>
+            <label for="titre">Titre</label>
+            <input type="text" name="titre"/>
           </section>
           <section>
-            <label for="mdp">Bonne réponse</label>
-            <input type="text" name="reponseBonne"/>
+            <label for="description">Description</label>
+            <input type="text" name="description"/>
           </section>
           <section>
-            <label for="mdp">Mauvaise réponse</label>
-            <input type="text" name="reponseMauvaise"/>
-          </section>
-          <section>
-            <label for="mdp">Mauvaise réponse</label>
-            <input type="text" name="reponseMauvaise"/>
-          </section>
-          <input type="submit" name="submit" id="submit" value="CRÉER"/>
+            <div id="image_quiz">
+                <div id="logo">
+                    <img src="./image/logo_noir.png">
+                </div>
+            </div>
+            <input type="submit" name="logo" class="modifier_quiz" value="Modifier image par défaut"/>
+        </section>
+          <input type="submit" name="submit" id="submit" onclick="document.location.href='ajout_quiz_question.php';" value="Suivant"/>
         </div>
       </form>
     </div>
