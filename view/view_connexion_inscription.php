@@ -1,7 +1,7 @@
 <main>
     <form action="" method="Post" class="formulaireUN">
     <h1>inscription</h1>
-    <p><?php echo $message?></p>
+    
         <div id="form">
             <section>
                 <label for="nom">Nom</label>
@@ -25,6 +25,7 @@
             </section>
             <p class="p_form_ins">vous avez déjà un compte</p>
             <input type="submit" name ="inscription" value="valider"id="valide1"/>
+            <p><?php echo ($user->getErrorMes())?></p>
         </div>
     </form>
     <form action="" method="Post" class="formulaireDEUX">
