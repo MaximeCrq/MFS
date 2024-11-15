@@ -8,7 +8,7 @@ class ControlerList {
         
         public function boucle(){
             foreach($user as $cards){
-                $user.=$user.cards($cards);
+                $user = $user.cards($cards);
             }
         }
 
