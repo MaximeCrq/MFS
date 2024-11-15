@@ -12,19 +12,19 @@
             <option value="HTMLetCSS">HTML et CSS</option>
           </select>
           <section>
-            <label for="mdp">Question</label>
+            <label for="question">Question</label>
             <input type="text" name="questionPose"/>
           </section>
           <section>
-            <label for="mdp">Bonne réponse</label>
+            <label for="bonne_reponse">Bonne réponse</label>
             <input type="text" name="reponseBonne"/>
           </section>
           <section>
-            <label for="mdp">Mauvaise réponse</label>
+            <label for="mauvaise_reponse">Mauvaise réponse</label>
             <input type="text" name="reponseMauvaise"/>
           </section>
           <section>
-            <label for="mdp">Mauvaise réponse</label>
+            <label for="mauvaise_reponse">Mauvaise réponse</label>
             <input type="text" name="reponseMauvaise"/>
           </section>
           <input type="submit" name="submit" id="submit" value="CRÉER"/>
