@@ -40,7 +40,7 @@
                 <input type="password" name="mdp"/>
             </section>
             <p class="p_form_co">je n'ai pas de compte</p>
-            <input type="submit" name ="submit2" value="valider"id="valide2"/>
+            <input type="submit" name ="connexion" value="valider"id="valide2"/>
         </div>
     </form>
     
