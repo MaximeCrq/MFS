@@ -24,7 +24,7 @@
                 <input type="password" name="verifMdp"/>
             </section>
             <p class="p_form_ins">vous avez déjà un compte</p>
-            <input type="submit" name ="submit" value="valider"id="valide1"/>
+            <input type="submit" name ="inscription" value="valider"id="valide1"/>
         </div>
     </form>
     <form action="" method="Post" class="formulaireDEUX">

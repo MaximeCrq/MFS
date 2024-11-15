@@ -6,7 +6,7 @@ const formulaire_deux = document.querySelector(".formulaireDEUX");
 
 const para = document.querySelector(".p_form_ins");
 //console.log(para);
-
+const button = document.querySelector("#valide1")
 
 const para_co = document.querySelector(".p_form_co");
 //console.log(para);
@@ -23,4 +23,7 @@ para_co.addEventListener('click',() =>{
     formulaire_deux.classList.toggle("afficher")
     formulaire_un.style.display="flex"
    formulaire_deux.style.display="none"
+})
+button.addEventListener('click',(event)=>{
+    event.preventDefault();
 })

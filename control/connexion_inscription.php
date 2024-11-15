@@ -28,9 +28,10 @@ function nettoyage_donnee_insc(){
     
     $nouveau_objet=new manager_user;
 if(isset($_POST["inscription"])){
-    
+    echo("crevette");
      if($mes_donnee['erreur'] != ''){
             $message = $mes_donnee['erreur'];
+            echo("crevette");
         }
     else{
         $data = recherchUser($mes_donnee["mail"]);
