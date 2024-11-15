@@ -65,6 +65,7 @@ form section label{
     background-color: black;
     color: white;
 }
+
 @media (max-width: 450px) {
     main #contenu{
         width: 90%;
@@ -78,7 +79,4 @@ form section label{
         padding: 2px;
     }
 
-}
-#image_quiz{
-    display: inline-block;
 }

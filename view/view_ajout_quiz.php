@@ -20,12 +20,12 @@
             <input type="text" name="description"/>
           </section>
           <section>
-            <div id="perso">
+            <div id="image_quiz">
                 <div id="logo">
-                    <img src="./image/logo1.png">
+                    <img src="./image/logo_noir.png">
                 </div>
             </div>
-            <input type="submit" name="logo" class="bouton_quiz" value="Modifier image par défaut"/>
+            <input type="submit" name="logo" class="modifier_quiz" value="Modifier image par défaut"/>
         </section>
           <input type="submit" name="submit" id="submit" onclick="document.location.href='ajout_quiz_question.php';" value="Suivant"/>
         </div>

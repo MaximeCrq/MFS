@@ -30,6 +30,7 @@ public function optionCategory(?array $categorie_quiz):string{
 //Fonction qui teste le formulaire d'ajout de quiz
 //Param : void
 //Return : array
+
 public function formTestQuiz():array{
     //1) Vérifier le champ vide :
     if(empty($_POST["title_quiz"]) || empty($_POST["description_quiz"])){
@@ -44,4 +45,55 @@ public function formTestQuiz():array{
     return ["title_quiz" => $title_quiz, "description_quiz" => $description_quiz, 'erreur' => ''];
 }
 
+  //Fonction pour enregister un quiz en BDD
+  public function registerQuiz():void{
+    //Ajout d'une Catégoire en BDD
+    //Je vérifie que je reçois le formulaire d'ajout
+    if(isset($_POST['ajouterQuiz'])){
+        //je teste le formulaire
+        $tab = $this->formTestQuiz();
+
+        //je vérifie si je suis dans le cas d'erreur
+        if($tab['erreur'] != ''){
+            $this->setMessage($tab['erreur']);
+        }else{
+            //Création de mon objet $category à partir de ManagerCategory
+            $quiz = new manager_ajout_quiz($tab['title_quiz']);
+
+            //Sinon je vérifie si la catégorie existe déjà en BDD
+            $data = $quiz->readQuizByName();
+
+            //Je vérifie si tout s'est bien passé (pas d'erreur de communication avec la BDD)
+            if(gettype($data) == 'string'){
+                $this->setMessage('Une erreur est survenue. La Base de donnée est injoignable. Réessayer ultérieurement.');
+            }else if(!empty($data)){
+                //Si elle existe, j'affiche un message d'erreur
+                $this->setMessage("{$tab['name_category']} existe déjà !");
+            }else{
+                //Sinon j'effectue l'ajout et j'affiche un message de confirmation
+                $this->setMessage($quiz->addQuiz());
+            }
+            
+        }
+    }
+}
+
+//Fonction pour afficher la liste des catégorie
+public function displayQuiz():void{
+    //Affichage de la liste des Catégories
+    //Création de mon objet $quiz à partir de manager_ajout_quiz
+    $quiz = new manager_ajout_quiz(null);
+
+    //je récupère la liste des catégories
+    $data = $quiz->readQuiz();
+    //Je vérifie si tout s'est bien passé (pas d'erreur de communication avec la BDD)
+    if(gettype($data) == 'string'){
+        $this->setListeQuiz('Une erreur est survenue. Veuillez réessayer ultérieurement.');
+    }else{
+        //Sinon j'affiche la liste des categories
+        foreach($data as $quiz){
+            $this->setListeQuiz($this->getListeQuiz().$this->listeQuiz($quiz));
+        }
+    } 
+}
 }
