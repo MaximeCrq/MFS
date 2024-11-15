@@ -1,6 +1,7 @@
 <main>
     <form action="" method="Post" class="formulaireUN">
     <h1>inscription</h1>
+    <p><?php echo $message?></p>
         <div id="form">
             <section>
                 <label for="nom">Nom</label>
@@ -23,7 +24,7 @@
                 <input type="password" name="verifMdp"/>
             </section>
             <p class="p_form_ins">vous avez déjà un compte</p>
-            <input type="submit" name ="submit" value="valider"/>
+            <input type="submit" name ="submit" value="valider"id="valide1"/>
         </div>
     </form>
     <form action="" method="Post" class="formulaireDEUX">
@@ -39,7 +40,8 @@
                 <input type="password" name="mdp"/>
             </section>
             <p class="p_form_co">je n'ai pas de compte</p>
-            <input type="submit" name ="submit" value="valider"/>
+            <input type="submit" name ="submit2" value="valider"id="valide2"/>
         </div>
     </form>
+    
 </main>
