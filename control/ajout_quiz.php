@@ -21,11 +21,12 @@ public function setListeQuiz(?string $listeQuiz): self { $this->listeQuiz = $lis
 
 
 //Méthodes
-
-// Fonction pour format quiz data
-private function listeQuiz($quiz): string {
-    return "<div><h3>{$quiz['title']}</h3><p>{$quiz['description']}</p></div>";
-}
+    //Fonction pour mettre en forme l'affichage d'un quiz
+    //Param : array['id_quiz'=>INT, 'title_quiz'=>string]
+    //Return : string
+    public function liQuiz($quiz):string{
+        return "<li> {$quiz['title_quiz']} </li>";
+    }
 
 //Fonction qui teste le formulaire d'ajout de quiz
 //Param : void
@@ -45,7 +46,7 @@ public function formTestQuiz():array{
 }
 
 //Fonction pour enregister un quiz en BDD
-  public function registerQuiz():void{
+public function registerQuiz():void{
     //Ajout d'un quiz en BDD
     //Je vérifie que je reçois le formulaire d'ajout
     if(isset($_POST['ajouterQuiz'])){
@@ -91,7 +92,7 @@ public function displayQuiz():void{
     }else{
         //Sinon j'affiche la liste des quiz
         foreach($data as $quiz){
-            $this->setListeQuiz($this->getListeQuiz().$this->listeQuiz($quiz));
+            $this->setListeQuiz($this->getListeQuiz().$this->liQuiz($quiz));
         }
     } 
 }
