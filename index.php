@@ -144,6 +144,9 @@ switch($path){
         break;
     case '/MFS/ajout_formateur' :
         //inclure mes views
+        include './control/liste_admin_user.php';
+        $user4= new ControlerListAdmin;
+        $user4->listUser();
         $header-> displayNav();
         $header->role();
         $style='ajout_formateur';
