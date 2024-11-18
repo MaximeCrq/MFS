@@ -2,12 +2,12 @@
 class ModelQuiz{
 
 //Constructeur
-public function __construct($title_quiz){
+public function __construct($title_quiz, $description_quiz, $img_quiz){
     // $id_quiz="";
     // $categorie_quiz="";
     $this->title_quiz = $title_quiz;
-    // $description_quiz="";
-    // $img_quiz="";
+    $this->description_quiz = $description_quiz;
+    $this->img_quiz = $img_quiz;
 }
 
 //Attributs 
