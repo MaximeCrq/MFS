@@ -68,7 +68,7 @@ class ControlInscription{
 
             }else{
                 $utilisateur=new ManagerUser($mes_donnee['mail']);
-                $utilisateur->setFirstname($mes_donnee["prenom"])->setLastname($mes_donnee["nom"])->setEmail($mes_donnee["mail"])->setPassword($mes_donnee["mdp"]);
+                $utilisateur->setFirstname($mes_donnee["prenom"])->setLastname($mes_donnee["nom"])->setEmail($mes_donnee["mail"])->setPassword($mes_donnee["mdp"])->setRoles(2);
                         
                 if(empty($utilisateur->recherche_User())){
                     $this->setMessage($utilisateur->add_USER());
@@ -110,7 +110,8 @@ class ControlInscription{
                             $_SESSION['firstname_user'] = $data[0]['firstname_user'];
                             $_SESSION['lastname_user'] = $data[0]['lastname_user'];
                             $_SESSION['email_user'] = $data[0]['email_user'];
-                            print_r($_SESSION['id_user']);
+                            $_SESSION['role'] = $data[0]['roles_user'];
+                            
                             $this->setMessageCo("{$_SESSION['firstname_user']} est connecté avec succés !");
                         }
                     }
