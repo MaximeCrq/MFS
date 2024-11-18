@@ -57,6 +57,7 @@ class ControlerList {
                     <h3>Nom :{$utilisateur['lastname_user']}</h3>
                     <p>Login : {$utilisateur['email_user']}</p>
                 </div>
+                <input type='submit' value='ajout formateur'/>
             </article>";
 
         }

@@ -57,7 +57,7 @@ class ControlerListBan {
                     <h3>Nom: {$utilisateur['lastname_user']}</h3> 
                     <p>Login :{$utilisateur['email_user']}</p>
                 </div>
-                <input type='submit' value='ban'/>
+                <input type='submit' value='unban'/>
             </article>";
 
         }
