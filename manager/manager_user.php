@@ -101,5 +101,22 @@ class ManagerUser extends ModelUser{
             return $error->getMessage();
         }
     }
+    public function USER() :array | string{
+        $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        $email= $this->getEmail();
+        try{
+            
+            $req = $bdd->prepare('UPDATE users SET roles_user=2 where email_user=(?)');
+            $req->bindParam(1,$email,PDO::PARAM_STR);
+            
+            $req->execute();
+
+            $donner = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            return $donner ;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
 }
 ?>
