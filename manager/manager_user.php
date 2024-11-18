@@ -7,18 +7,20 @@ class ManagerUser extends ModelUser{
        
        
         try{
-            $req = $bdd->prepare('INSERT INTO users (firstname_user, lastname_user, email_user,password_user) VALUES (?,?,?,?)');
+            $req = $bdd->prepare('INSERT INTO users (firstname_user, lastname_user, email_user,password_user,roles_user) VALUES (?,?,?,?,?)');
     
     
             $nom_user=$this->getFirstname();
             $prenom_user =$this->getLastname();
             $mail_user= $this->getEmail();
             $mdp_user= $this->getPassword();
+            $role= $this->getRoles();
             
             $req->bindParam(1,$nom_user,PDO::PARAM_STR);
             $req->bindParam(2,$prenom_user,PDO::PARAM_STR);
             $req->bindParam(3,$mail_user,PDO::PARAM_STR);
             $req->bindParam(4,$mdp_user,PDO::PARAM_STR);
+            $req->bindParam(5,$role,PDO::PARAM_STR);
     
             $req->execute();
     
@@ -60,7 +62,7 @@ class ManagerUser extends ModelUser{
             $req->execute();
 
             $donner = $req->fetchAll(PDO::FETCH_ASSOC);
-            
+
             return $donner ;
         }catch(EXCEPTION $error){
             return $error->getMessage();
