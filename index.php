@@ -108,6 +108,7 @@ switch($path){
     case '/MFS/ajout_quiz' :
         //inclure mes views
         $quiz = new ControlerAjoutQuiz();
+        $quiz->registerQuiz();
         $header-> displayNav();
         $style='ajout_quiz';
         $script='ajout_quiz';
