@@ -28,7 +28,7 @@ class manager_ajout_quiz extends ModelQuiz{
         }
     }
 
-    //Fonction pour récupérer l'ensemble des catégories
+    //Fonction pour récupérer l'ensemble des quiz
     //Param : void
     //Return : array | string
     function readQuiz():array | string{

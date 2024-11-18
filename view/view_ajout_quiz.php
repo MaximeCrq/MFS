@@ -25,11 +25,12 @@
                     <img src="./image/logo_noir.png">
                 </div>
             </div>
-            <input type="submit" name="logo" class="modifier_quiz" value="Modifier image par défaut"/>
+            <input type="submit" name="logo" class="modifier_quiz" value="Modifier image"/>
         </section>
-          <input type="submit" name="submit" id="submit" onclick="document.location.href='ajout_quiz_question.php';" value="Suivant"/>
+          <input type="button" name="ajouterQuiz" id="submit" onclick="document.location.href='ajout_quiz_question';" value="Suivant"/>
         </div>
       </form>
+      <p><?php echo $quiz->getMessage() ?></p>
     </div>
   </main>
 
