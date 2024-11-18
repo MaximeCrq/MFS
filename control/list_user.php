@@ -1,8 +1,8 @@
 <?php
 class ControlerList {
-        $manage_user = new  ManagerListUser;
 
-        $user=$manage_user->List_USER();
+    
+        $user= $this->List_USER();
 
         print_r($user);
         
@@ -26,7 +26,7 @@ class ControlerList {
     
         try{
             //2nd Etape : préparer ma requête INSERT INTO
-            $req = $bdd->prepare('SELECT firstname_user, lastname_user, email_user,password_user FROM users ');
+            $req = $bdd->prepare('SELECT firstname_user, lastname_user, email_user,password_user FROM users');
             
 
             //4eme Etape : exécution de la requête
