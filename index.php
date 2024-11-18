@@ -64,7 +64,9 @@ switch($path){
         include './view/view_footer.php';
         break;
     case '/MFS/liste_quiz' :
+        include './control/ajout_quiz.php';
         //inclure mes views
+        $quiz = new ControlerAjoutQuiz();
         $header-> displayNav();
         $style='liste_quiz';
         $script='liste_quiz';
