@@ -134,7 +134,9 @@ switch($path){
         break;
     case '/MFS/liste_utilisateur' :
         //inclure mes views
-        $header-> displayNav();
+        include './control/liste_user.php';
+        $user2=new ControlerList;
+        $user2->listUser();
         $style='liste_utilisateur';
         $script='liste_utilisateur';
         include './view/view_header.php';
