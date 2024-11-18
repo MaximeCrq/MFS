@@ -39,7 +39,7 @@ class ManagerUser extends ModelUser{
         $email=$this->getEmail();
         
         try{
-            $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user = (?)');
+            $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user , roles_user FROM users WHERE email_user = (?)');
 
             $req->bindParam(1,$email,PDO::PARAM_STR);
 

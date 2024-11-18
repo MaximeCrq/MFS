@@ -12,7 +12,7 @@ include './manager/manager_user.php';
 include './manager/manager_ajout_quiz.php';
 
 $header = new ControlerHeader();
-$header->role();
+
 
 //Récupération de l'url entrée par l'utilisateur
 $url = parse_url($_SERVER['REQUEST_URI']);
@@ -27,6 +27,7 @@ switch($path){
     case '/MFS/' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='accueil';
         $script='accueil';
         include './view/view_header.php';
@@ -36,6 +37,7 @@ switch($path){
     case '/MFS/accueil' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='accueil';
         $script='accueil';
         include './view/view_header.php';
@@ -45,6 +47,7 @@ switch($path){
     case '/MFS/compte' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='compte';
         $script='compte';
         include './view/view_header.php';
@@ -58,6 +61,7 @@ switch($path){
         $user->controlConnexion();
         $user->controlForm();
         $header-> displayNav();
+        $header->role();
         $style='connexion_inscription';
         $script='connexion_inscription';
         include './view/view_header.php';
@@ -69,6 +73,7 @@ switch($path){
         //inclure mes views
         $quiz = new ControlerAjoutQuiz();
         $header-> displayNav();
+        $header->role();
         $style='liste_quiz';
         $script='liste_quiz';
         include './view/view_header.php';
@@ -78,6 +83,7 @@ switch($path){
     case '/MFS/mentions_legales' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='mentions_legales';
         $script='mentions_legales';
         include './view/view_header.php';
@@ -87,6 +93,7 @@ switch($path){
     case '/MFS/statistique' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='statistique';
         $script='statistique';
         include './view/view_header.php';
@@ -100,6 +107,7 @@ switch($path){
     case '/MFS/liste_quiz/quiz1' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='quiz';
         $script='quiz';
         include './view/view_header.php';
@@ -117,6 +125,7 @@ switch($path){
         $quiz->displayQuiz();
         $quiz->registerQuiz();
         $header-> displayNav();
+        $header->role();
         $style='ajout_quiz';
         $script='ajout_quiz';
         include './view/view_header.php';
@@ -126,6 +135,7 @@ switch($path){
     case '/MFS/ajout_quiz_question' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='ajout_quiz_question';
         $script='ajout_quiz_question';
         include './view/view_header.php';
@@ -135,6 +145,7 @@ switch($path){
     case '/MFS/ajout_formateur' :
         //inclure mes views
         $header-> displayNav();
+        $header->role();
         $style='ajout_formateur';
         $script='ajout_formateur';
         include './view/view_header.php';
@@ -147,6 +158,7 @@ switch($path){
         $user2=new ControlerList;
         $user2->listUser();
         $header-> displayNav();
+        $header->role();
         $style='liste_utilisateur';
         $script='liste_utilisateur';
         include './view/view_header.php';
@@ -159,6 +171,7 @@ switch($path){
         $user3=new ControlerListBan;
         $user3->listUser();
         $header-> displayNav();
+        $header->role();
         $style='ban_liste';
         $script='ban_liste';
         include './view/view_header.php';
