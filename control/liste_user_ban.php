@@ -51,7 +51,7 @@ class ControlerListBan {
         }
         public function cards ($utilisateur){
          
-            return "<article class='cards'>
+            return "<article class='cardBan'>
                 <div class='texte'>
                     <h3>Prénom: {$utilisateur['firstname_user']}</h3>
                     <h3>Nom: {$utilisateur['lastname_user']}</h3> 
