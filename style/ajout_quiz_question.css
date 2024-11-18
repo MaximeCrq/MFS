@@ -31,6 +31,8 @@ main form section{
     justify-content: space-between;
     color : white;
 }
+
+
 main form section input[type="text"]{
     height: 30px;
     border-radius: 12px;
