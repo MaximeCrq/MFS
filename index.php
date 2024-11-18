@@ -72,6 +72,7 @@ switch($path){
         include './control/ajout_quiz.php';
         //inclure mes views
         $quiz = new ControlerAjoutQuiz();
+        $quiz->displayQuiz();
         $header-> displayNav();
         $header->role();
         $style='liste_quiz';
@@ -133,7 +134,9 @@ switch($path){
         include './view/view_footer.php';
         break;
     case '/MFS/ajout_quiz_question' :
+        include './control/ajout_quiz_question.php';
         //inclure mes views
+        $quiz = new ControlerQuizQuestion();
         $header-> displayNav();
         $header->role();
         $style='ajout_quiz_question';

@@ -25,5 +25,6 @@
           </div>
         </div>
       </form>
+      <p><?php echo $quiz->getMessageQuestion() ?></p>
     </div>
   </main>

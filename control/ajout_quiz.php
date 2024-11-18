@@ -25,7 +25,17 @@ public function setListeQuiz(?string $listeQuiz): self { $this->listeQuiz = $lis
     //Param : array['id_quiz'=>INT, 'title_quiz'=>string]
     //Return : string
     public function liQuiz($quiz):string{
-        return "<li> {$quiz['title_quiz']} </li>";
+        return "<article style = 
+        'border : 1px solid rgb(207,52,0);
+        height: 100px;
+        width: auto;
+        border-radius: 12px;
+        padding: 2px;
+        margin: 25px;
+        text-align : center;'>
+        <img src='{$quiz['img_quiz']}' alt='image quiz'>
+        <h1> {$quiz['title_quiz']} </h1>
+        </article>";
     }
 
 //Fonction qui teste le formulaire d'ajout de quiz
