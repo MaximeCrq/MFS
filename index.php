@@ -135,9 +135,10 @@ switch($path){
         break;
     case '/MFS/liste_utilisateur' :
         //inclure mes views
-        include './control/liste_user.php';
+        include './control/list_user.php';
         $user2=new ControlerList;
         $user2->listUser();
+        $header-> displayNav();
         $style='liste_utilisateur';
         $script='liste_utilisateur';
         include './view/view_header.php';
@@ -146,6 +147,8 @@ switch($path){
         break;
     case '/MFS/ban_liste' :
         //inclure mes views
+        $user3=new ControlerListBan;
+        $user3->listUser();
         $header-> displayNav();
         $style='ban_liste';
         $script='ban_liste';
