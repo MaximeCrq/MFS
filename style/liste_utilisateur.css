@@ -1,7 +1,9 @@
+
 section{
     display: flex;
     justify-content: center;
     padding: 2%;
+    flex-direction: column;
 
 }
 .cards{
@@ -20,4 +22,5 @@ section{
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 9px;
     align-self: center;
+    color:white;
 }

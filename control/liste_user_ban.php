@@ -1,5 +1,5 @@
 <?php
-class ControlerList {
+class ControlerListBan {
     private $utilisateurs;
     private $message;
 
@@ -56,6 +56,7 @@ class ControlerList {
                     <h3>Login : {$utilisateur['firstname_user']}</h3>
                     <p> : {$utilisateur['lastname_user']} - {$utilisateur['email_user']}</p>
                 </div>
+                <input type='submit' value='ban'/>
             </article>";
 
         }
