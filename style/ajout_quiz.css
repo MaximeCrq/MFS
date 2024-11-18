@@ -65,6 +65,25 @@ form section label{
     background-color: black;
     color: white;
 }
+
+#créa_quiz input[type="button"]{
+    display: flex;
+   
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(207,52,0);
+    margin-top: 10%;
+    justify-self: center;
+    height: 25px;
+    width: 20%;
+    font-weight: 700;
+
+}
+#créa_quiz input[type="button"]:hover{
+    background-color: black;
+    color: white;
+}
+
 @media (max-width: 450px) {
     main #contenu{
         width: 90%;
@@ -73,12 +92,21 @@ form section label{
        min-width:  100px ;
 
     }
+    form input[type="submit"]{
+        min-width:  100px ;
+ 
+     }
     input[type="text"]{
         height: 30px;
         padding: 2px;
     }
 
 }
-#image_quiz{
-    display: inline-block;
+#logo img{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    background-color: white;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 12px;
 }

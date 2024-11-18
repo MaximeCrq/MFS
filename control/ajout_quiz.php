@@ -22,15 +22,14 @@ public function setListeQuiz(?string $listeQuiz): self { $this->listeQuiz = $lis
 
 //Méthodes
 
-//Fonction pour mettre en forme le <select> des categories
-public function optionCategory(?array $categorie_quiz):string{
-    return "<option value='".$categorie_quiz['id_category']."'>{$categorie_quiz['title_category']}</option>";
+// Fonction pour format quiz data
+private function listeQuiz($quiz): string {
+    return "<div><h3>{$quiz['title']}</h3><p>{$quiz['description']}</p></div>";
 }
 
 //Fonction qui teste le formulaire d'ajout de quiz
 //Param : void
 //Return : array
-
 public function formTestQuiz():array{
     //1) Vérifier le champ vide :
     if(empty($_POST["title_quiz"]) || empty($_POST["description_quiz"])){
@@ -45,9 +44,9 @@ public function formTestQuiz():array{
     return ["title_quiz" => $title_quiz, "description_quiz" => $description_quiz, 'erreur' => ''];
 }
 
-  //Fonction pour enregister un quiz en BDD
+//Fonction pour enregister un quiz en BDD
   public function registerQuiz():void{
-    //Ajout d'une Catégoire en BDD
+    //Ajout d'un quiz en BDD
     //Je vérifie que je reçois le formulaire d'ajout
     if(isset($_POST['ajouterQuiz'])){
         //je teste le formulaire
@@ -57,7 +56,7 @@ public function formTestQuiz():array{
         if($tab['erreur'] != ''){
             $this->setMessage($tab['erreur']);
         }else{
-            //Création de mon objet $category à partir de ManagerCategory
+            //Création de mon objet $quiz à partir de ManagerQuiz
             $quiz = new manager_ajout_quiz($tab['title_quiz']);
 
             //Sinon je vérifie si la catégorie existe déjà en BDD
@@ -65,10 +64,10 @@ public function formTestQuiz():array{
 
             //Je vérifie si tout s'est bien passé (pas d'erreur de communication avec la BDD)
             if(gettype($data) == 'string'){
-                $this->setMessage('Une erreur est survenue. La Base de donnée est injoignable. Réessayer ultérieurement.');
+                $this->setMessage('Une erreur est survenue. Veuillez réessayer ultérieurement.');
             }else if(!empty($data)){
                 //Si elle existe, j'affiche un message d'erreur
-                $this->setMessage("{$tab['name_category']} existe déjà !");
+                $this->setMessage("{$tab['title_quiz']} existe déjà !");
             }else{
                 //Sinon j'effectue l'ajout et j'affiche un message de confirmation
                 $this->setMessage($quiz->addQuiz());
@@ -78,19 +77,19 @@ public function formTestQuiz():array{
     }
 }
 
-//Fonction pour afficher la liste des catégorie
+//Fonction pour afficher la liste des quiz
 public function displayQuiz():void{
-    //Affichage de la liste des Catégories
+    //Affichage de la liste des quiz
     //Création de mon objet $quiz à partir de manager_ajout_quiz
     $quiz = new manager_ajout_quiz(null);
 
-    //je récupère la liste des catégories
+    //je récupère la liste des quiz
     $data = $quiz->readQuiz();
     //Je vérifie si tout s'est bien passé (pas d'erreur de communication avec la BDD)
     if(gettype($data) == 'string'){
         $this->setListeQuiz('Une erreur est survenue. Veuillez réessayer ultérieurement.');
     }else{
-        //Sinon j'affiche la liste des categories
+        //Sinon j'affiche la liste des quiz
         foreach($data as $quiz){
             $this->setListeQuiz($this->getListeQuiz().$this->listeQuiz($quiz));
         }
