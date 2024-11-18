@@ -72,6 +72,7 @@ switch($path){
         include './control/ajout_quiz.php';
         //inclure mes views
         $quiz = new ControlerAjoutQuiz();
+        $quiz->displayQuiz();
         $header-> displayNav();
         $header->role();
         $style='liste_quiz';
