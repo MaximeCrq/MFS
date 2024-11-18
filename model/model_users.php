@@ -73,7 +73,7 @@ class ModelUser{
 
     //Constructeur
     public function __construct(?string $login){
-        $this->firstname=$login;
+        $this->email=$login;
     }
 
 }

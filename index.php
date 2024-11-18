@@ -10,7 +10,6 @@ include './model/model_users.php';
 include './manager/manager_user.php';
 
 $header = new ControlerHeader();
-$header-> displayNav();
 
 //Récupération de l'url entrée par l'utilisateur
 $url = parse_url($_SERVER['REQUEST_URI']);
@@ -24,6 +23,7 @@ switch($path){
     // page d'accueil
     case '/MFS/' :
         //inclure mes views
+        $header-> displayNav();
         $style='accueil';
         $script='accueil';
         include './view/view_header.php';
@@ -32,6 +32,7 @@ switch($path){
         break;
     case '/MFS/accueil' :
         //inclure mes views
+        $header-> displayNav();
         $style='accueil';
         $script='accueil';
         include './view/view_header.php';
@@ -40,6 +41,7 @@ switch($path){
         break;
     case '/MFS/compte' :
         //inclure mes views
+        $header-> displayNav();
         $style='compte';
         $script='compte';
         include './view/view_header.php';
@@ -50,7 +52,9 @@ switch($path){
         //inclure mes views
         include "./control/connexion_inscription.php";
         $user = new ControlInscription;
+        $user->controlConnexion();
         $user->controlForm();
+        $header-> displayNav();
         $style='connexion_inscription';
         $script='connexion_inscription';
         include './view/view_header.php';
@@ -59,6 +63,7 @@ switch($path){
         break;
     case '/MFS/liste_quiz' :
         //inclure mes views
+        $header-> displayNav();
         $style='liste_quiz';
         $script='liste_quiz';
         include './view/view_header.php';
@@ -67,6 +72,7 @@ switch($path){
         break;
     case '/MFS/mentions_legales' :
         //inclure mes views
+        $header-> displayNav();
         $style='mentions_legales';
         $script='mentions_legales';
         include './view/view_header.php';
@@ -75,6 +81,7 @@ switch($path){
         break;
     case '/MFS/statistique' :
         //inclure mes views
+        $header-> displayNav();
         $style='statistique';
         $script='statistique';
         include './view/view_header.php';
@@ -87,6 +94,7 @@ switch($path){
     //ESSAIE
     case '/MFS/liste_quiz/quiz1' :
         //inclure mes views
+        $header-> displayNav();
         $style='quiz';
         $script='quiz';
         include './view/view_header.php';
@@ -99,6 +107,7 @@ switch($path){
     //ADMINISTRATEUR
     case '/MFS/ajout_quiz' :
         //inclure mes views
+        $header-> displayNav();
         $style='ajout_quiz';
         $script='ajout_quiz';
         include './view/view_header.php';
@@ -107,6 +116,7 @@ switch($path){
         break;
     case '/MFS/ajout_quiz_question' :
         //inclure mes views
+        $header-> displayNav();
         $style='ajout_quiz_question';
         $script='ajout_quiz_question';
         include './view/view_header.php';
@@ -115,6 +125,7 @@ switch($path){
         break;
     case '/MFS/ajout_formateur' :
         //inclure mes views
+        $header-> displayNav();
         $style='ajout_formateur';
         $script='ajout_formateur';
         include './view/view_header.php';
@@ -123,6 +134,7 @@ switch($path){
         break;
     case '/MFS/liste_utilisateur' :
         //inclure mes views
+        $header-> displayNav();
         $style='liste_utilisateur';
         $script='liste_utilisateur';
         include './view/view_header.php';
@@ -131,10 +143,19 @@ switch($path){
         break;
     case '/MFS/ban_liste' :
         //inclure mes views
+        $header-> displayNav();
         $style='ban_liste';
         $script='ban_liste';
         include './view/view_header.php';
         include './view/view_ban_liste.php';
         include './view/view_footer.php';
+        break;
+
+
+    //DECONNEXION
+    case '/MFS/deconnexion' :
+        include './control/deconnexion.php';
+        $deco = new Deconnexion();
+        $deco->deconnexion();
         break;
 }

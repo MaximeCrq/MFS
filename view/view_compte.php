@@ -27,6 +27,6 @@
             </div>
             <input type="submit" name="mdp" class="bouton_compte" value="Modifier son mot de passe"/>
         </section>
-        <input type="submit" name="valider" value="DECONNEXION" id="deconnexion"/>
+        <a href="/MFS/deconnexion" id="deconnexion">DECONNEXION</a>
     </div>
 </main> 

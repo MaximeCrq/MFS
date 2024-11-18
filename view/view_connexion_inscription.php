@@ -34,14 +34,15 @@
         
             <section>
                 <label for="mail">Mail</label>
-                <input type="email" name="mail"/>
+                <input type="email" name="mailCo" placeholder="azerty@qwerty.com"/>
             </section>
             <section>
                 <label for="mdp">Mot de pass</label>
-                <input type="password" name="mdp"/>
+                <input type="password" name="mdpCo" placeholder="**********"/>
             </section>
             <p class="p_form_co">je n'ai pas de compte</p>
             <input type="submit" name ="connexion" value="valider"id="valide2"/>
+            <p><?php echo $user->getMessageCo()?></p>
         </div>
     </form>
     
