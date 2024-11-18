@@ -58,9 +58,9 @@ public function registerQuiz():void{
             $this->setMessage($tab['erreur']);
         }else{
             //Création de mon objet $quiz à partir de ManagerQuiz
-            $quiz = new manager_ajout_quiz($tab['title_quiz']);
+            $quiz = new manager_ajout_quiz($tab['title_quiz'] , $tab['description_quiz'], img_quiz:null);
 
-            //Sinon je vérifie si la catégorie existe déjà en BDD
+            //Sinon je vérifie si le quiz existe déjà en BDD
             $data = $quiz->readQuizByName();
 
             //Je vérifie si tout s'est bien passé (pas d'erreur de communication avec la BDD)
@@ -82,7 +82,7 @@ public function registerQuiz():void{
 public function displayQuiz():void{
     //Affichage de la liste des quiz
     //Création de mon objet $quiz à partir de manager_ajout_quiz
-    $quiz = new manager_ajout_quiz(null);
+    $quiz = new manager_ajout_quiz(null,description_quiz:null,img_quiz:null);
 
     //je récupère la liste des quiz
     $data = $quiz->readQuiz();

@@ -13,11 +13,11 @@
           </select>
           <section>
             <label for="titre">Titre</label>
-            <input type="text" name="titre"/>
+            <input type="text" name="title_quiz"/>
           </section>
           <section>
             <label for="description">Description</label>
-            <input type="text" name="description"/>
+            <input type="text" name="description_quiz"/>
           </section>
           <section>
             <div id="image_quiz">
@@ -27,7 +27,8 @@
             </div>
             <input type="submit" name="logo" class="modifier_quiz" value="Modifier image"/>
         </section>
-          <input type="button" name="ajouterQuiz" id="submit" onclick="document.location.href='ajout_quiz_question';" value="Suivant"/>
+          <input type="submit" name="ajouterQuiz" id="submit" onclick="document.location.href='ajout_quiz_question';" value="Ajouter"/>
+          <input type="button" name="next" id="submit" onclick="document.location.href='ajout_quiz_question';" value="Suivant"/>
         </div>
       </form>
       <p><?php echo $quiz->getMessage() ?></p>

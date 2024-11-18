@@ -61,24 +61,24 @@ form section label{
     font-weight: 700;
 
 }
-#créa_quiz input[type="submit"]:hover{
-    background-color: black;
-    color: white;
-}
-
 #créa_quiz input[type="button"]{
     display: flex;
    
     background-color: white;
     border-radius: 15px;
     border: 1px solid rgb(207,52,0);
-    margin-top: 10%;
+    margin-top: 2%;
     justify-self: center;
     height: 25px;
     width: 20%;
     font-weight: 700;
 
 }
+#créa_quiz input[type="submit"]:hover{
+    background-color: black;
+    color: white;
+}
+
 #créa_quiz input[type="button"]:hover{
     background-color: black;
     color: white;
@@ -110,3 +110,4 @@ form section label{
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 12px;
 }
+
