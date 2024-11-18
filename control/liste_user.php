@@ -54,11 +54,13 @@ class ControlerList {
             return "<article class='cards'>
                 <div class='texte'>
                     <h3>Login : {$utilisateur['firstname_user']}</h3>
-                    <p> : {$utilisateur['lastname_user']} - {$utilisateur['email_user']}</p>
+                    <h3>{$utilisateur['lastname_user']}</h3>
+                    <p> {$utilisateur['email_user']}</p>
                 </div>
             </article>";
 
         }
+        
     
 }
 
