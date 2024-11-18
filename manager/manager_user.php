@@ -1,7 +1,8 @@
 <?php
 class ManagerUser extends ModelUser{
 
-    function add_USER(){
+    //vérifier format
+    public function add_USER():string{
         $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
        
        
@@ -35,39 +36,38 @@ class ManagerUser extends ModelUser{
             return $error->getMessage();
         }
     }
-    
 
-}
-
-function recherche_User($login_user){
-    //1Er Etape : Instancier l'objet de connexion PDO
-    $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    public function recherche_User():array | string{
+        //1Er Etape : Instancier l'objet de connexion PDO
+        $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
 
-    //Try...Catch
-    try{
-        //2nd Etape : préparer ma requête SELECT
-        $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user = (?)');
+
+        $email=$this->getEmail();
+        //Try...Catch
+        try{
+            //2nd Etape : préparer ma requête SELECT
+            $req = $bdd->prepare('SELECT id_user, lastname_user, firstname_user, email_user, password_user FROM users WHERE email_user = (?)');
 
 
-        //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre
-        $req->bindParam(1,$login_user,PDO::PARAM_STR);
+
+            //3Eme Etape : introduire le login de l'utilisateur dans ma requête avec du Binding de Paramètre
+            $req->bindParam(1,$email,PDO::PARAM_STR);
 
 
-        //4eme Etape : executer la requête
-        $req->execute();
+            //4eme Etape : executer la requête
+            $req->execute();
 
 
-        //5eme Etape : Récupère les réponses de la BDD
-        $data = $req->fetchAll(PDO::FETCH_ASSOC);
+            //5eme Etape : Récupère les réponses de la BDD
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
 
 
-        //6eme Etape : je retourne mes $data
-        return $data;
-    }catch(EXCEPTION $error){
-        return $error->getMessage();
+            //6eme Etape : je retourne mes $data
+            return $data;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
     }
 }
-
-
 ?>

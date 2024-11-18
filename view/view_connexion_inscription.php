@@ -25,7 +25,7 @@
             </section>
             <p class="p_form_ins">vous avez déjà un compte</p>
             <input type="submit" name ="inscription" value="valider"id="valide1"/>
-            <p><?php echo $user->getErrorMes()?></p>
+            <p><?php echo $user->getMessage()?></p>
         </div>
     </form>
     <form action="" method="Post" class="formulaireDEUX">
