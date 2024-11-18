@@ -53,8 +53,9 @@ class ControlerListBan {
          
             return "<article class='cards'>
                 <div class='texte'>
-                    <h3>Login : {$utilisateur['firstname_user']}</h3>
-                    <p> : {$utilisateur['lastname_user']} - {$utilisateur['email_user']}</p>
+                    <h3>Prénom: {$utilisateur['firstname_user']}</h3>
+                    <h3>Nom: {$utilisateur['lastname_user']}</h3> 
+                    <p>Login :{$utilisateur['email_user']}</p>
                 </div>
                 <input type='submit' value='ban'/>
             </article>";

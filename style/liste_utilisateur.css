@@ -8,7 +8,7 @@ section{
 }
 .cards{
     border: 2px solid rgb(207,52,0);
-    width: 60%;
+    width: 50%;
     padding: 2%;
     border-radius: 12px;
     display: flex;
