@@ -30,7 +30,7 @@ class ControlerListBan {
    public function listUser(){
     $utilisateur = new ManagerUser(null);
 
-       $users=$utilisateur->List_USER();
+       $users=$utilisateur->banUSER();
        if (gettype($users)=='array'){
             $this->boucle($users);
         }

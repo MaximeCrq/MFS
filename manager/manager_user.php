@@ -68,5 +68,38 @@ class ManagerUser extends ModelUser{
             return $error->getMessage();
         }
     }
+
+    public function banUSER() :array | string{
+        $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    
+        try{
+            
+            $req = $bdd->prepare('SELECT firstname_user, lastname_user, email_user,password_user FROM users where roles_user = 3');
+            
+            $req->execute();
+
+            $donner = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            return $donner ;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
+    public function adminUSER() :array | string{
+        $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    
+        try{
+            
+            $req = $bdd->prepare('SELECT firstname_user, lastname_user, email_user,password_user FROM users where roles_user = 1');
+            
+            $req->execute();
+
+            $donner = $req->fetchAll(PDO::FETCH_ASSOC);
+
+            return $donner ;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
 }
 ?>
