@@ -30,9 +30,12 @@ class ControlerHeader{
     }
 
     public function role(){
-        if ($_SESSION['role']==1){
-            $this->setClassUser("");
+        if(isset($_SESSION['role'])){
+            if ($_SESSION['role']==1){
+                $this->setClassUser("");
+            }
         }
+        
     }
 
 }
