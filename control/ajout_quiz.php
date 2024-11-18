@@ -58,7 +58,7 @@ public function registerQuiz():void{
             $this->setMessage($tab['erreur']);
         }else{
             //Création de mon objet $quiz à partir de ManagerQuiz
-            $quiz = new manager_ajout_quiz($tab['title_quiz'] , $tab['description_quiz'], img_quiz:null);
+            $quiz = new manager_ajout_quiz($tab['title_quiz'] , $tab['description_quiz'], $tab['img_quiz']);
 
             //Sinon je vérifie si le quiz existe déjà en BDD
             $data = $quiz->readQuizByName();
