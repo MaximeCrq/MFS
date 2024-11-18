@@ -27,5 +27,6 @@ class ControlerHeader{
             $this->setClassNav("");
         }
     }
+
 }
 ?>
