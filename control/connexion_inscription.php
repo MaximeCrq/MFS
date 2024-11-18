@@ -4,6 +4,7 @@ class ControlInscription{
    
 
     private ?string $message;
+    private ?string $messageCo;
 
     public function __construct(){
         $this->message = "";

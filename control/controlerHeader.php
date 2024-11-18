@@ -2,6 +2,7 @@
 class ControlerHeader{
     private ?string $class;
     private ?string $classNav;
+    private ?string $classUser;
 
     public function __construct(){
         $this->class = "";
