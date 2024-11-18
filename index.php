@@ -7,7 +7,9 @@ session_start();
 include './utils/sanitize.php';
 include './control/controlerHeader.php';
 include './model/model_users.php';
+include './model/model_quiz.php';
 include './manager/manager_user.php';
+include './manager/manager_ajout_quiz.php';
 
 $header = new ControlerHeader();
 
@@ -106,8 +108,10 @@ switch($path){
 
     //ADMINISTRATEUR
     case '/MFS/ajout_quiz' :
+        include './control/ajout_quiz.php';
         //inclure mes views
         $quiz = new ControlerAjoutQuiz();
+        $quiz->displayQuiz();
         $quiz->registerQuiz();
         $header-> displayNav();
         $style='ajout_quiz';
