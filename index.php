@@ -147,6 +147,7 @@ switch($path){
         break;
     case '/MFS/ban_liste' :
         //inclure mes views
+        include './control/liste_user_ban.php';
         $user3=new ControlerListBan;
         $user3->listUser();
         $header-> displayNav();
