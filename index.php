@@ -140,7 +140,7 @@ switch($path){
         break;
     case '/MFS/liste_utilisateur' :
         //inclure mes views
-        include './control/list_user.php';
+        include './control/liste_user.php';
         $user2=new ControlerList;
         $user2->listUser();
         $header-> displayNav();
