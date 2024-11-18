@@ -69,5 +69,23 @@ class ManagerUser extends ModelUser{
             return $error->getMessage();
         }
     }
+    public function List_USER() :array | string{
+        $bdd = new PDO('mysql:host=localhost;dbname=adrarquiz','root','',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+    
+        try{
+            //2nd Etape : préparer ma requête INSERT INTO
+            $req = $bdd->prepare('SELECT firstname_user, lastname_user, email_user,password_user FROM users');
+            
+
+            //4eme Etape : exécution de la requête
+            $req->execute();
+
+            $donner = $req->fetchAll(PDO::FETCH_ASSOC);
+            //5eme Etape : Retourne un message de confirmation
+            return $donner ;
+        }catch(EXCEPTION $error){
+            return $error->getMessage();
+        }
+    }
 }
 ?>
