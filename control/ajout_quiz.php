@@ -33,7 +33,6 @@ public function setListeQuiz(?string $listeQuiz): self { $this->listeQuiz = $lis
         padding: 2px;
         margin: 25px;
         text-align : center;'>
-        
         <img src='{$quiz['img_quiz']}' alt='image quiz'>
         <h1> {$quiz['title_quiz']} </h1>
         </article>";
