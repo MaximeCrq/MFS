@@ -12,6 +12,7 @@ include './manager/manager_user.php';
 include './manager/manager_ajout_quiz.php';
 
 $header = new ControlerHeader();
+$header->role();
 
 //Récupération de l'url entrée par l'utilisateur
 $url = parse_url($_SERVER['REQUEST_URI']);
