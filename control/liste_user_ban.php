@@ -52,14 +52,32 @@ class ControlerListBan {
         public function cards ($utilisateur){
          
             return "<article class='cardBan'>
-                <div class='texte'>
-                    <h3>Prénom: {$utilisateur['firstname_user']}</h3>
-                    <h3>Nom: {$utilisateur['lastname_user']}</h3> 
-                    <p>Login :{$utilisateur['email_user']}</p>
-                </div>
-                <input type='submit' value='unban'/>
+                <form action='' method='post'>
+                    <div class='texte'>
+                        <h3>Prénom: {$utilisateur['firstname_user']}</h3>
+                        <h3>Nom: {$utilisateur['lastname_user']}</h3> 
+                        <p>Login :{$utilisateur['email_user']}</p>
+                        <input type='hidden' value=`{$utilisateur['email_user']}` name ='crevette'/>
+                    </div>
+                    <input type='submit' value='unban' name=unban/>
+                    
+                </form>
             </article>";
 
+        }
+        function val(){
+            $enregistrement=$_POST["crevette"];
+            return $enregistrement;
+        }
+        
+        function modification(){
+            if(isset($_post["unban"])){
+                echo $this->val();
+                // $verification=new ManagerUser(null);
+                // $verification->setEmail();
+                // $verification->USER();
+             
+            }
         }
     
 }

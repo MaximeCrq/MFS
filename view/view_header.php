@@ -24,7 +24,7 @@
             <a id="lien_logo_compte" href="/MFS/compte" class="<?php echo $header->getClassNav(); ?>"><img id="logo_compte" src="./image/icon_login1.png"></a>
         </nav>
         <nav id='nav_bar_2'>
-            <ul class="<?php echo $header->getClassUser(); ?>">
+            <ul ">
                 <li><a href="/MFS/ajout_quiz">AJOUTER UN QUIZ</a></li>
                 <li><a href="/MFS/ajout_formateur">AJOUTER UN FORMATEUR</a></li>
                 <li><a href="/MFS/liste_utilisateur">LISTE DES UTILISATEURS</a></li>
