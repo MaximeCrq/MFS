@@ -26,20 +26,18 @@ class ControlerHeader{
 
     //Méthods
     public function displayNav():void{
-        
         if(isset($_SESSION['id_user'])){
             $this->setClass("displayNone");
             $this->setClassNav("");
         }
     }
-
+    
     public function role(){
         if(isset($_SESSION['role'])){
             if ($_SESSION['role']==1){
                 $this->setClassUser("");
             }
         }
-        
     }
 
 }
