@@ -1,15 +1,19 @@
 <?php
 class ControlerHeader{
+    //Attributs
     private ?string $class;
     private ?string $classNav;
     private ?string $classUser;
 
+    //Construct
     public function __construct(){
         $this->class = "";
         $this->classNav = "displayNone";
         $this->classUser = "displayNone";
     }
 
+
+    //Getter/Setter
     public function getClass(): ?string { return $this->class; }
     public function setClass(?string $class): self { $this->class = $class; return $this; }
 
@@ -20,7 +24,7 @@ class ControlerHeader{
     public function setClassUser(?string $classUser): self { $this->classUser = $classUser; return $this; }
 
 
-
+    //Méthods
     public function displayNav():void{
         
         if(isset($_SESSION['id_user'])){
